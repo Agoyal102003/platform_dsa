@@ -2,7 +2,7 @@
   "name": "dsa_platform",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://platform-dsa-1.onrender.com",
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
