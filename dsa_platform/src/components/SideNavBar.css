@@ -1,0 +1,42 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1000px; /* Increase the width as desired */
+    background-color: #171b1d;
+    margin-top: 20px;
+    border-radius: 0px 15px 15px 0px;
+    height: 420px;
+}
+
+
+
+.button-container button {
+    display: flex;
+    align-items: center;
+    background-color: #171b1d; /* Sets the background color to white */
+    border: none; /* Removes default button border */
+    padding: 10px;
+    margin-bottom: 5px; /* Adds space between the buttons */
+    cursor: pointer;
+    font-size: 16px; /* Adjusts the font size */
+    color: #9299a1; /* Sets text color */
+    border-radius: 5px;
+    padding: 15px 0px 15px 15px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.button-container button:hover {
+    color: #2f8d46 !important;
+    background-color: #e2f8e3 !important;
+}
+
+.button-container .icon {
+    margin-right: 8px; /* Adds space between the icon and the text */
+    color: #9299a1;
+}

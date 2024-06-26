@@ -1,0 +1,34 @@
+.Part2 {
+    margin: 50px 0;
+    text-align: center;
+    /* background-color: #171b1d; */
+  }
+  
+  .Preorder {
+    /* background-color: rgb(24, 24, 24); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .Preoder_Para {
+    color: #ccc;
+  }
+
+  .Part2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding: 30px 30px 30px 30px;
+  }
+  
+  .card {
+    margin-right: 10px; /* Add margin between cards */
+  }
+  
+  

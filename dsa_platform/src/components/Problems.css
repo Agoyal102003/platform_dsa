@@ -1,0 +1,211 @@
+/* styles.css */
+.problist{
+    background-color: #0a0e0f;
+    min-height: 100vh;
+}
+
+.problem {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .text::first-letter {
+    text-transform: uppercase;
+  }
+
+  .bttttn {
+    background-color: #2f8d46 !important;
+    border-radius: 4px;
+    color: #fff !important;
+    text-align: center;
+    width: 180px;
+    height: 40px;
+    font-family: "Source Sans 3" !important;
+  }
+  
+  .problem h2 {
+    margin: 0;
+  }
+  
+  .problem button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .problem button:hover {
+    background-color: #0056b3;
+  }
+
+  /* ProblemSolving css */
+
+  .prblslvng{
+    display: flex;
+    /* align-items: center; */
+    background-color: #0a0e0f;
+  }
+  
+  .problm{
+    width: 40%;
+    margin-right: 10px;
+    overflow-y: auto; /* Enable scrolling for problem content */
+    height: 100vh;
+    scrollbar-width: none;
+    /* Hide scrollbar for Webkit browsers */
+    -ms-overflow-style: none;
+  }
+
+  .codeEditor{
+    width: 60%;
+    background-color: #252525;
+    padding-left: 20px;
+    height: 100vh; /* Set maximum height for scrolling */
+    overflow-y: auto; 
+    scrollbar-width: none;
+    /* Hide scrollbar for Webkit browsers */
+    -ms-overflow-style: none;
+  }
+
+  .codeEditor::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+
+  .prbtitle {
+    margin-left: 30px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid  rgba(255, 255, 255, .1);
+  }
+
+  .prbdes {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .prbcases {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .casesbox{
+    background-color: #252525;
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #5e5e5e;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+   }
+
+   .filter-container > select {
+    background-color: rgb(31, 31, 31);
+    color: #ccc;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+    appearance: none; /* Remove default arrow in WebKit */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in WebKit */
+    position: relative;
+    width: 200px; /* Adjust width to your needs */
+    height: 35px; /* Adjust height to your needs */
+    overflow: hidden; /* Hide scrollbar */
+}
+
+/* For hiding scrollbar in WebKit browsers */
+.filter-container > select::-webkit-scrollbar {
+    display: none;
+}
+
+/* Add an arrow down icon */
+.filter-container {
+    position: relative;
+    width: 190px; /* Adjust width to match select */
+}
+
+.filter-container::after {
+    content: '▼'; /* Arrow down icon */
+    font-size: 12px;
+    color: #ccc;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't block clicks */
+}
+
+/* Hide scrollbar in Firefox */
+.filter-container > select {
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbar for IE/Edge */
+@supports (-ms-ime-align: auto) {
+    .filter-container > select {
+        overflow: -ms-autohiding-scrollbar;
+    }
+}
+
+.explore_practiceProgressBarSection__uzYl5 {
+  margin-left: 30px;
+}
+
+.explore_practiceProgressBarSection__uzYl5 .explore_practiceProgressBarContainer__3uyVa {
+  width: 600px;
+}
+
+.probsolvedheadng{
+  color: rgb(160, 157, 157);
+}
+
+.explore_practiceProgressBarContainer__3uyVa {
+  margin-top: 10px;
+}
+
+.explore_practiceProgressBarContainer__3uyVa .ui.tiny.progress {
+  height: .5rem !important;
+  background-color: rgba(50, 218, 92, 0.2);
+}
+
+.ui.tiny.progress {
+  font-size: .9rem;
+}
+
+.ui.progress:last-child {
+  margin: 0 0 1.5em;
+}
+
+.explore_practiceProgressBarContainer__3uyVa .ui.tiny.progress .bar {
+  min-width: 0;
+  background-color: #2f8d46;
+}
+
+.ui.tiny.progress .bar {
+  height: .5em;
+}
+
+.ui.progress .bar {
+  display: block;
+  line-height: 1;
+  position: relative;
+  width: 0%;
+  min-width: 2em;
+  background: #888;
+  border-radius: .28571429rem;
+  -webkit-transition: width .1s ease, background-color .1s ease;
+  transition: width .1s ease, background-color .1s ease;
+}

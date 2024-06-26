@@ -1,0 +1,692 @@
+.EditorModal_card-wrapper__YXtlV {
+    border-radius: 12px;
+    margin-left: 50px;
+    margin-right: 200px;
+    margin-top: 40px;
+    left: 0;
+    top: 0;
+    background: #171b1d;
+    position: relative;
+    padding: 16px;
+    box-shadow: none;
+    width: 85%;
+}
+
+.EditorModal_placeholder-wrapper__WGN9O {
+    position: relative;
+    height: 38px;
+    background: #202426;
+    border-radius: 19px;
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+}
+
+.EditorModal_profile-picture-as-initials__ikBpQ {
+    font-family: "Source Sans 3", sans-serif;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    vertical-align: middle;
+    -o-object-fit: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #000;
+    background: #aee8fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.EditorModal_placeholder__4bO1W {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    font-style: normal;
+    font-weight: 400;
+    color: #778089;
+    font-family: "Nunito", sans-serif;
+}
+
+.blurbackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    z-index: 10; /* Ensure it's above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EditorBlock_wrapper__k3Ccg {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 20px 2px;
+    border-radius: 12px;
+    padding: 5px 0px;
+}
+
+.EditorBlock_ex-title-wrapper__fXOQs {
+    padding-top: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.expanded-input-box {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    width: 55%;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 200px;
+    /* margin-top: 500px; */
+    height: 450px;
+    background-color: #171b1d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100% !important;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.EditorBlock_editor-details-main__wQ7Nl.EditorBlock_editor-details-main-background__I1DgD {
+    background-color: #202426;
+}
+
+.EditorBlock_editor-details-main__wQ7Nl {
+    padding: 6px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: max-content;
+}
+
+:where(.css-8gq7nz).ant-col {
+    position: relative;
+    max-width: 100%;
+    min-height: 1px;
+}
+
+:where(.css-8gq7nz).ant-col {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.profile-picture {
+    background-color: rgb(231, 231, 231);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 17px;
+    margin-right: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: rgb(226, 224, 224);
+    word-break: break-word;
+    line-height: 1.5714285714285714;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 14px;
+}
+
+.settings {
+    font-size: 12px;
+    color: grey;
+}
+
+.crossbox {
+    display: flex;
+    align-items: center;
+    
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.post-editor {
+    display: flex;
+    flex-direction: column;
+    background: #252b2e;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.content-editable {
+    min-height: 100px;
+    outline: none;
+}
+
+.editor-placeholder {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character-count {
+    font-size: 12px;
+    color: grey;
+    width: 95%;
+    margin-left: 10px;
+}
+
+.editor-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #e9e9ea;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Source Sans 3", sans-serif;
+    margin-left: 20px;
+}
+
+.upload-icon {
+    width: 20px;
+    height: 20px;
+    /* background: url('upload-icon.svg') no-repeat center center; */
+    background-size: contain;
+}
+
+.publish-button {
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    background: #148761;
+    height: 35px;
+    line-height: 18px;
+    box-shadow: none;
+    border-radius: 14px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ant-modal-wrap:has(.remove-modal-padding) {
+    overflow-x: hidden;
+}
+
+.FeedPosts_explore_main_div__RAH3I {
+    margin-top: 20px;
+    position: sticky;
+    top: 50px;
+    z-index: 1;
+    margin-left: 46px;
+    margin-right: 195px;
+    width: 86%;
+}
+
+.FeedPosts_tabs__5fPBJ {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 45px;
+    z-index: 1;
+    background-color: #171b1d;
+    margin: 0 5px 8px;
+    border-radius: 14px 14px 0 0;
+}
+
+.FeedPosts_tabs_single--active__4hCmy {
+    font-weight: 550 !important;
+    color: #62a588 !important;
+    background: #171b1d !important;
+    border-bottom: 3px solid #62a588 !important;
+    border-radius: 14px 14px 0 0 !important;
+}
+
+.FeedPosts_tabs_single__RgPBG {
+    width: 100%;
+    height: 38px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 22px;
+    color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 3px;
+    border-bottom: 3px solid transparent;
+}
+
+
+/* CommunityInput.css */
+
+.post_card {
+    background: #171b1d;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 200px 0px 53px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 665px;
+}
+
+.post_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post_author_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post_author_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post_author_imageee {
+    background-color: rgb(231, 231, 231);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 17px;
+    margin-right: 10px;
+}
+
+.post_author_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_author_name {
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+}
+
+.post_author_role, .post_time {
+    font-size: 12px;
+    color: gray;
+}
+
+.post_actions {
+    display: flex;
+    align-items: center;
+}
+
+.post_follow_button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.post_follow_icon {
+    margin-right: 5px;
+}
+
+.post_more_icon {
+    margin-left: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.post_content p {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-size: 16.5px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #bebec2;
+    letter-spacing: .3px;
+}
+
+.post_engagement {
+    padding-top: 10px;
+}
+
+.post_engagement_stats {
+    display: flex;
+}
+
+.post_engagement_item {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.post_engagement_icon {
+    margin-right: 5px;
+}
+
+.post_engagement_likes {
+    margin-top: 5px;
+    font-size: 12px;
+    color: gray;
+}
+
+.post_comment_section {
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.post_comment_input {
+    display: flex;
+    align-items: center;
+}
+
+.comment_profile_initials {
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 5px 10px 5px 5px;
+}
+
+.comment_text_input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    color: #c2c8cf;
+    margin-left: 5px;
+}
+
+.comment_text_input::placeholder {
+    color: #778089; /* Change this to your desired placeholder color */
+    opacity: 1; /* Ensure opacity is set to 1 if you want full color */
+}
+
+.comment_send_icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.Engagement_engagement_icons_span__YOVwc {
+    width: 42px;
+    height: 42px;
+    border-radius: 999999px;
+    background-color: #252b2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Engagement_engagement_like_span_dark_bg__LQmVl, .Engagement_engagement_liked_span_dark_bg__OWtt_ {
+    display: block;
+    background-image: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/ComActionsIcons.svg);
+    background-size: 77px;
+    cursor: pointer;
+    transform: scale(1.2);
+    background-position: 39px -18px;
+}
+
+.Engagement_engagement_like_span_dark_bg__LQmVl.liked {
+    display: block;
+    background-image: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/ComActionsIcons.svg);
+    background-size: 77px;
+    cursor: pointer;
+    transform: scale(1.2);
+    background-position: 21px -17px;
+}
+
+.Engagement_engagement_like_span_dark_bg__LQmVl {
+    width: 18px;
+    height: 18px;
+    background-position: 39px -18px;
+}
+
+.Engagement_engagement_comment_span_bg_dark__yFD0C {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/ComActionsIcons.svg);
+    background-size: 76px;
+    cursor: pointer;
+    transform: scale(1.1);
+    background-position: 21px -35px;
+}
+
+.Engagement_engagement_like_p__668FL {
+    font-family: "Source Sans 3", sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 17px;
+    color: #bebec2;
+    display: flex;
+    margin: auto 0;
+    padding-left: 9px;
+    min-width: 60px;
+}
+
+.CommunityIcon_community_icon_span__jwtCO {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CommunityIcon_send_icon_disabled_dark__9sG9A {
+    background-position: -8px -145px;
+}
+
+.CommunityIcon_community_icon_span_bg__9Wgqo {
+    width: 20px;
+    height: 22px;
+    background-image: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/com-home-icons-4.svg);;
+    transform: scale(1);
+}
+
+/* Comments */
+
+.post_Comment_author_image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post_Comment_author_name {
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.post_Comment_author_msg {
+    font-size: 12px;
+    color: rgb(182, 178, 178);
+}
+
+.delete_button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete_button:hover {
+    background-color: darkred;
+}
+
+.onedivcommunity {
+    display: flex; /* Use flexbox to align items */ 
+    align-items: center; 
+    border-right: none;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.profileImgcommunity {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Rounded shape */
+    background-color: #aee8fe; /* Light blue background */
+    color: #000; /* Black text */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.profileDetailscommunity {
+    color: white; /* White text */
+    font-family: var(--font-secondary); /* Custom font family */
+    margin-left: 10px;
+} 
+
+.communityprofilebox {
+    
+    width: 85%;
+    height: 190px;
+    border-radius: 10px;
+    margin-top: 38px;
+}
+
+.btn{
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 180px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.comtyprofile{
+    background-color: #171b1d;
+    margin-left: 80px;
+    border-radius: 15px;
+}
+
+.button-containerc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px; /* Increase the width as desired */
+    background-color: #171b1d;
+    margin-top: 20px;
+    border-radius: 15px;
+    height: 430px;
+}
+
+.button-containerc button {
+    display: flex;
+    align-items: center;
+    background-color: #171b1d; /* Sets the background color to white */
+    border: none; /* Removes default button border */
+    padding: 10px;
+    margin-bottom: 5px; /* Adds space between the buttons */
+    cursor: pointer;
+    font-size: 16px; /* Adjusts the font size */
+    color: #9299a1; /* Sets text color */
+    border-radius: 5px;
+    padding: 15px 0px 15px 50px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.button-containerc .icon {
+    margin-right: 8px; /* Adds space between the icon and the text */
+    color: #9299a1;
+}
+
+
+

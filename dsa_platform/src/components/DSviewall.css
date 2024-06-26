@@ -1,0 +1,92 @@
+.viewdsbox{
+    background-color: #0a0e0f;
+}
+
+.headingds{
+    color: whitesmoke;
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.desds{
+    color: rgb(180, 173, 173);
+    margin-left: 100px;
+    margin-top: 15px;
+    max-width: 900px;
+    font-size: 20px;
+    font-weight: lighter;
+    height: auto;
+    white-space: normal; /* Ensures that text will wrap */
+    word-wrap: break-word; /* Breaks long words */
+    overflow-wrap: break-word;
+}
+
+.chapt{
+    background-color: #171b1d;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 15px;
+}
+
+.chapterds{
+    color: whitesmoke;
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.ds{
+    color: whitesmoke;
+    margin-left: 50px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    height: 75px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(151, 143, 143);
+    cursor: pointer;
+}
+
+.dataStructureDetail{
+    background-color: #0a0e0f;
+}
+
+.dsname{
+    color: rgb(238, 231, 231);
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 60px;
+    padding-top: 40px;
+}
+
+.dscontent {
+    /* color: rgb(207, 201, 201); */
+    color: #9c9fa3;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+/* DSviewall.css */
+
+/* Container for the whole flowchart */
+.flowchart-container {
+    position: relative; /* Ensure relative positioning for absolute children */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* Full viewport height */
+}
+

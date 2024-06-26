@@ -1,0 +1,37 @@
+.Part1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .Whatdoyouwanttolearn {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  .Search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .searchbar {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .searchButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(0, 167, 94);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .searchButton:hover {
+    background-color: rgb(0, 153, 84);
+  }
+  

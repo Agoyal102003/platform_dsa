@@ -1,0 +1,44 @@
+/* CodeEditorOutput.css */
+
+.output-container {
+    position: fixed;
+    bottom: -200px; /* Initially hidden off the screen */
+    left: 0;
+    width: 60%;
+    margin-left: 546px;
+    background-color: #252525;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 1000;
+    height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    color: white;
+  }
+
+  .output-container.open {
+    bottom: 0; /* Slides up into view */
+  }
+
+  .toggle-output-button {
+    background: #455b65;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  .output-content {
+    padding: 20px;
+  }
+
+  .output-content h2 {
+    margin-bottom: 10px;
+  }
+
+  .output-content pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 0; /* Remove default margin */
+  }
