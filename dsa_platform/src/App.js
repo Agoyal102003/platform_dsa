@@ -61,6 +61,10 @@ function App() {
                 <Route path="/users/sign_up" element={<Form isSignInPage={false} />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/problems" element={<Problems />} />
+                <Route path="/DataStructures" element={<DataStructuresViewAll />} />
+                <Route path="/Algorithms" element={<AlgorithmsViewAll />} />
+                <Route path="/data-structure/:name" element={<DataStructureDetail />} />
+                <Route path="/algorithm/:name" element={<AlgorithmDetail />} />
 
                 {/* Protected Routes */}
                 {isAuthenticated ? (
@@ -72,10 +76,10 @@ function App() {
                         <Route path="/add-problem" element={<ProtectedRoute><AddProblem /></ProtectedRoute>} />
                         <Route path="/Community" element={<ProtectedRoute><Community /></ProtectedRoute>} />
                         <Route path="/EditProfile" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
-                        <Route path="/DataStructures" element={<ProtectedRoute><DataStructuresViewAll /></ProtectedRoute>} />
+                        {/* <Route path="/DataStructures" element={<ProtectedRoute><DataStructuresViewAll /></ProtectedRoute>} />
                         <Route path="/Algorithms" element={<ProtectedRoute><AlgorithmsViewAll /></ProtectedRoute>} />
                         <Route path="/data-structure/:name" element={<ProtectedRoute><DataStructureDetail /></ProtectedRoute>} />
-                        <Route path="/algorithm/:name" element={<ProtectedRoute><AlgorithmDetail /></ProtectedRoute>} />
+                        <Route path="/algorithm/:name" element={<ProtectedRoute><AlgorithmDetail /></ProtectedRoute>} /> */}
                         <Route path="/pathfinding-visualizer" element={<ProtectedRoute><PathFindingVisualizer /></ProtectedRoute>} />
                         <Route path="/sorting-visualizer" element={<ProtectedRoute><SortingVisualizer /></ProtectedRoute>} />
                         <Route path="/Read" element={<ProtectedRoute><Read /></ProtectedRoute>} />
