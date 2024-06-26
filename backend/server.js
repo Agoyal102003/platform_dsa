@@ -23,7 +23,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-const mongoURI = 'mongodb+srv://2021ceb1012:DPFObHi7rl7bYZrh@cluster0.cgsx649.mongodb.net/';
+
+const mongoURI = process.env.MONGODB_URI || 'your_default_connection_string';
 mongoose.connect(mongoURI, {
     useNewUrlParser: true, // Use the new URL parser
     useUnifiedTopology: true, // Use the new Server Discover and Monitoring engine
