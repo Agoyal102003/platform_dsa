@@ -66,7 +66,7 @@ function App() {
                     <>
                         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
                         <Route path="/leaderboard" element={<ProtectedRoute><Leaderboard /></ProtectedRoute>} />
-                        <Route path="/problems" element={<ProtectedRoute><Problems /></ProtectedRoute>} />
+                        <Route path="/problems" element={<Problems />} />
                         <Route path="/problems/:id" element={<ProtectedRoute><ProblemSolving /></ProtectedRoute>} />
                         <Route path="/add-problem" element={<ProtectedRoute><AddProblem /></ProtectedRoute>} />
                         <Route path="/Community" element={<ProtectedRoute><Community /></ProtectedRoute>} />
