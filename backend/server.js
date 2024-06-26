@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 
-const mongoURI = process.env.MONGODB_URI || 'your_default_connection_string';
+const mongoURI = process.env.MONGO_URI || 'your_default_connection_string';
 mongoose.connect(mongoURI, {
     useNewUrlParser: true, // Use the new URL parser
     useUnifiedTopology: true, // Use the new Server Discover and Monitoring engine
