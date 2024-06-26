@@ -7,6 +7,7 @@ function SortingChart() {
 
     useEffect(() => {
         generateSortingArray();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

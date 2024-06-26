@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import CodeEditorWindow from "./CodeEditorWindow";
 import axios from "axios";
 import { classnames } from "../utils/general";
@@ -60,19 +60,7 @@ const Landing = ({ testCases, onSolutionAccepted }) => {
     setLanguage(sl);
   };
 
-  useEffect(() => {
-    if (enterPress && ctrlPress) {
-      handleCompile();
-    }
-  }, [ctrlPress, enterPress]);
-
-  const onChange = (action, data) => {
-    if (action === "code") {
-      setCode(data);
-    }
-  };
-
-  const handleCompile = async () => {
+  const handleCompile = useCallback(async () => {
     setProcessing(true);
     const results = [];
     for (const testCase of testCases) {
@@ -120,6 +108,18 @@ const Landing = ({ testCases, onSolutionAccepted }) => {
 
     if (results.every((result) => result.passed)) {
       onSolutionAccepted();
+    }
+  }, [code, language.id, testCases, onSolutionAccepted]);
+
+  useEffect(() => {
+    if (enterPress && ctrlPress) {
+      handleCompile();
+    }
+  }, [ctrlPress, enterPress, handleCompile]);
+
+  const onChange = (action, data) => {
+    if (action === "code") {
+      setCode(data);
     }
   };
 
