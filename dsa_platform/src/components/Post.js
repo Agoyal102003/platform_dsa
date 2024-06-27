@@ -199,7 +199,7 @@ function Post({ post, removePost }) {
                     
                     {post.authorImage ? (
                                 <img
-                                src={post.authorImage}
+                                src={`https://platform-dsa-1.onrender.com/${post.authorImage}`}
                                 alt="Profile"
                                 className="post_author_image"
                                 style={{ objectFit: 'cover' }}

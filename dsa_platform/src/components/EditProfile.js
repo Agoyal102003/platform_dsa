@@ -129,7 +129,7 @@ function EditProfile() {
                     <div className="card cardedit">
                         <div className="card-header cardheaderedit">Profile Picture</div>
                         <div className="card-body text-center">
-                        <img className="img-account-profile rounded-circle mb-2 editimg" src={imagePreview} alt="Profile" />
+                        <img className="img-account-profile rounded-circle mb-2 editimg" src={`https://platform-dsa-1.onrender.com/${imagePreview}`} alt="Profile" />
                             <div className='imginpt'>
                                 <input type="file" name="profileImage" onChange={handleFileChange} />
                             </div>

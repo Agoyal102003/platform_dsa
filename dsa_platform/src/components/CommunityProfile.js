@@ -56,7 +56,7 @@ function CommunityProfile() { // Update prop name here
             <div className="onedivcommunity">
                 <div className="profileImgcommunity" style={{ backgroundColor: 'rgb(231, 231, 231)' }}>
                     {profileDataCommunity.profileImage ? (
-                        <img src={profileDataCommunity.profileImage} alt="Profile" className="profileImgcommunity" />
+                        <img src={`https://platform-dsa-1.onrender.com/${profileDataCommunity.profileImage}`} alt="Profile" className="profileImgcommunity" />
                     ) : (
                         'A'
                     )}

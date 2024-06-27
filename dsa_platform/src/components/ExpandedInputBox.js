@@ -87,7 +87,7 @@ function ExpandedInputBox({ addPost, onClose }) {
                     <div className="profile-info">
                         <div className="profile-picture">
                             {userData.profileImage ? (
-                                <img src={userData.profileImage} alt="Profile" style={{ borderRadius: "100%" }} />
+                                <img src={`https://platform-dsa-1.onrender.com/${userData.profileImage}`} alt="Profile" style={{ borderRadius: "100%" }} />
                             ) : (
                                 <div className="profile-initials">
                                     {getUserInitial(userData.fullName)}
