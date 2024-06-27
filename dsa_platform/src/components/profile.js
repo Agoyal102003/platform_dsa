@@ -33,34 +33,25 @@ function Profile() {
                     Authorization: `Bearer ${token}`
                 }
             };
-    
+
             try {
-                // Fetch profile data including rank
-                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
+                const res = await axios.get('/api/users/profile', config);
                 setProfileData({
                     fullName: res.data.fullName || 'A',
                     username: res.data.username || 'N/A',
                     institution: res.data.institution || 'N/A',
                     language: res.data.language || 'N/A',
-                    profileImage: res.data.profileImage || 'https://bootdey.com/img/Content/avatar/avatar1.png',
+                    profileImage: res.data.profileImage || '',
                     rank: res.data.rank || 0  // Update rank from API response
                 });
-
-                // Update solvedProblems field in the user's profile
-                await axios.put('https://platform-dsa-1.onrender.com/api/users/updateSolvedProblems', {
-                    solvedProblems: solvedProblems
-                }, config);
-
+                console.log("Profile data updated in state:", res.data);
             } catch (error) {
-                console.error('Error fetching or updating profile data:', error);
-                // Handle error if needed
+                console.error('Error fetching profile data:', error);
             }
         };
-    
-        if (solvedProblems !== null) { // Ensure solvedProblems is available before updating
-            fetchProfileData();
-        }
-    }, [solvedProblems]);
+
+        fetchProfileData();
+    }, []);
 
     return (
         <div className="fulldiv"> 
