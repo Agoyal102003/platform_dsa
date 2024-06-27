@@ -58,7 +58,7 @@ function Profile() {
             <div className="onediv">
                 <div className="profileImg">
                     {profileData.profileImage ? (
-                        <img src={`https://platform-dsa-1.onrender.com/${profileData.profileImage}`} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
+                        <img src={profileData.profileImage} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
                     ) : (
                         <p
                             style={{
