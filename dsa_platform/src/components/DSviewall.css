@@ -55,6 +55,7 @@
 
 .dataStructureDetail{
     background-color: #0a0e0f;
+    min-height: 100vh;
 }
 
 .dsname{

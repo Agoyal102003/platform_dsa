@@ -16,7 +16,7 @@ function EditProfile() {
         language: '',
         gender: '',
     });
-    const [imagePreview, setImagePreview] = useState('http://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
+    const [imagePreview, setImagePreview] = useState('https://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
 
     // Fetch user profile data on component mount
     useEffect(() => {
@@ -73,7 +73,7 @@ function EditProfile() {
       if (file) {
           reader.readAsDataURL(file);
       } else {
-          setImagePreview('http://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
+          setImagePreview('https://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
       }
   };
 

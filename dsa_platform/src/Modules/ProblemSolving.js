@@ -103,8 +103,8 @@ const ProblemDetail = () => {
           </div>
         </div>
         <div className='codeEditor'>
-          <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} />
-          {solved ? <button className='bttttn' disabled>Solved</button> : <button className='bttttn' onClick={handleSolutionAccepted}>Solve Problem</button>}
+          {/* <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} /> */}
+          {solved ? <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} /> : <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} />}
         </div>
       </div>
     </div>
