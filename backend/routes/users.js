@@ -82,34 +82,35 @@ router.post('/login', async (req, res) => {
 
 // Update profile route
 router.post('/profile', authenticateToken, upload.single('profileImage'), async (req, res) => {
-    const { fullName, username, contactNo, institution, bio, language, gender } = req.body;
+    const { fullName, email, username, contactNo, institution, bio, language, gender } = req.body;
     const profileImage = req.file ? req.file.path : null;
-    const userId = req.user.id;
 
     try {
-        let user = await User.findById(userId);
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
+        const userId = req.user.id; // Assuming user ID is available in req.user
+        const user = await User.findById(userId);
+
+        if (user) {
+            user.fullName = fullName || user.fullName;
+            user.email = email || user.email;
+            user.username = username || user.username;
+            user.contactNo = contactNo || user.contactNo;
+            user.institution = institution || user.institution;
+            user.bio = bio || user.bio;
+            user.language = language || user.language;
+            user.gender = gender || user.gender;
+
+            if (profileImage) {
+                user.profileImage = profileImage;
+            }
+
+            await user.save();
+            res.json({ message: 'Profile updated successfully', user });
+        } else {
+            res.status(404).json({ message: 'User not found' });
         }
-
-        user.fullName = fullName || user.fullName;
-        user.username = username;
-        user.contactNo = contactNo;
-        user.institution = institution;
-        user.bio = bio;
-        user.language = language;
-        user.gender = gender || user.gender;
-
-        if (profileImage) {
-            user.profileImage = profileImage;
-        }
-
-        await user.save();
-
-        res.json({ message: 'Profile updated successfully', user });
     } catch (error) {
-        console.error(error.message);
-        res.status(500).json({ message: 'Error updating profile' });
+        console.error('Error updating profile:', error);
+        res.status(500).json({ message: 'Server error' });
     }
 });
 

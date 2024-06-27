@@ -19,7 +19,7 @@ function Profile() {
         rank: 0  // Initialize rank in state
     });
 
-    const solvedProblems = useSelector((state) => state.problems.solvedProblems);
+    const solvedProblems = useSelector((state) => state.problems.solvedProblems.filter(problem => problem !== null)); // Filter out null values
 
     useEffect(() => {
         dispatch(fetchSolvedProblems());
