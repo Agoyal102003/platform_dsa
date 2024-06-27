@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
-  const response = await axios.get('/api/posts');
+  const response = await axios.get('https://platform-dsa-1.onrender.com/api/posts');
   return response.data;
 });
 

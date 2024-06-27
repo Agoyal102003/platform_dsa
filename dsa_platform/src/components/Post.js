@@ -27,7 +27,7 @@ function Post({ post, removePost }) {
                     },
                 };
 
-                const response = await axios.get(`/api/posts/${post._id}/likeStatus`, config);
+                const response = await axios.get(`https://platform-dsa-1.onrender.com/api/posts/${post._id}/likeStatus`, config);
                 setLiked(response.data.liked);
                 setLikeCount(response.data.likeCount);
             } catch (error) {
@@ -44,7 +44,7 @@ function Post({ post, removePost }) {
 
     const handleDeletePost = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/api/posts/${post._id}`, {
+            const response = await fetch(`https://platform-dsa-1.onrender.com/api/posts/${post._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function Post({ post, removePost }) {
         };
 
         try {
-            const response = await axios.get('/api/users/profile', config);
+            const response = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
             return {
                 fullName: response.data.fullName,
                 username: response.data.username,
@@ -114,7 +114,7 @@ function Post({ post, removePost }) {
         };
 
         try {
-            const response = await fetch(`/api/posts/${post._id}/comments`, {
+            const response = await fetch(`https://platform-dsa-1.onrender.com/api/posts/${post._id}/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ function Post({ post, removePost }) {
                 },
             };
 
-            const response = await axios.post(`/api/posts/${post._id}/like`, {}, config);
+            const response = await axios.post(`https://platform-dsa-1.onrender.com/api/posts/${post._id}/like`, {}, config);
             setLiked(response.data.liked);
             setLikeCount(response.data.likeCount);
         } catch (error) {
@@ -162,7 +162,7 @@ function Post({ post, removePost }) {
 
     const handleDeleteComment = async (commentId) => {
         try {
-            const response = await fetch(`/api/posts/${post._id}/comments/${commentId}`, {
+            const response = await fetch(`https://platform-dsa-1.onrender.com/api/posts/${post._id}/comments/${commentId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

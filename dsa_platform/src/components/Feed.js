@@ -17,7 +17,7 @@ function Feed() {
     useEffect(() => {
         const fetchInitialPosts = async () => {
             try {
-                const response = await axios.get('/api/posts');
+                const response = await axios.get('https://platform-dsa-1.onrender.com/api/posts');
                 dispatch(setPosts(response.data));
             } catch (error) {
                 console.error('Error fetching posts:', error);
@@ -45,7 +45,7 @@ function Feed() {
         };
 
         try {
-            const response = await axios.get('/api/users/profile', config);
+            const response = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
             return {
                 fullName: response.data.fullName,
                 username: response.data.username,
@@ -80,7 +80,7 @@ function Feed() {
         console.log("newPost", newPost);
 
         try {
-            const response = await axios.post('/api/posts', newPost);
+            const response = await axios.post('https://platform-dsa-1.onrender.com/api/posts', newPost);
             
             if (!response.data) {
                 throw new Error('Network response was not ok');

@@ -9,7 +9,7 @@ export const fetchSolvedProblems = createAsyncThunk('problems/fetchSolvedProblem
           Authorization: `Bearer ${token}`
       }
   };
-  const response = await axios.get('/api/users/profile', config);
+  const response = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
   return response.data.solvedProblems;
 });
 

@@ -21,14 +21,14 @@ const ProblemsList = () => {
       }
 
       try {
-        const res = await axios.get('http://localhost:3000/api/problems', {
+        const res = await axios.get('https://platform-dsa-1.onrender.com/api/problems', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
         setProblems(res.data);
 
-        const userRes = await axios.get(`http://localhost:3000/api/users/profile`, {
+        const userRes = await axios.get(`https://platform-dsa-1.onrender.com/api/users/profile`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

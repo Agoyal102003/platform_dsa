@@ -7,7 +7,7 @@ function AlgorithmDetail() {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        fetch(`/api/algorithm/${name}`)
+        fetch(`https://platform-dsa-1.onrender.com/api/algorithm/${name}`)
             .then(response => response.json())
             .then(data => setContent(data.content))
             .catch(error => console.error('Error fetching data:', error));

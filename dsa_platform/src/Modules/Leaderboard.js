@@ -12,7 +12,7 @@ function Leaderboard() {
     useEffect(() => {
         const fetchLeaderboard = async () => {
             try {
-                const response = await axios.get('/api/leaderboard');
+                const response = await axios.get('https://platform-dsa-1.onrender.com/api/leaderboard');
 
                 // Sort users by rank
                 const sortedUsers = response.data.sort((a, b) => a.rank - b.rank);

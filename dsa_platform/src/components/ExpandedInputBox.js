@@ -25,7 +25,7 @@ function ExpandedInputBox({ addPost, onClose }) {
             };
 
             try {
-                const res = await axios.get('/api/users/profile', config);
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 setUserData({
                     fullName: res.data.fullName || 'A', // Default if fullName is empty
                     profileImage: res.data.profileImage || '', // Set profile image from API response

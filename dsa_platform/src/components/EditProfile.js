@@ -29,7 +29,7 @@ function EditProfile() {
             };
 
             try {
-                const res = await axios.get('/api/users/profile', config);
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 const userProfile = res.data;
                 setFormData({
                     fullName: userProfile.fullName || '',
@@ -104,7 +104,7 @@ function EditProfile() {
     };
 
     try {
-        const res = await axios.post('/api/users/profile', formDataToSend, config);
+        const res = await axios.post('https://platform-dsa-1.onrender.com/api/users/profile', formDataToSend, config);
         console.log('Profile update response:', res.data);
 
         // Update image URL if profileImage was uploaded

@@ -32,7 +32,7 @@ function App() {
         const token = localStorage.getItem('token');
         if (token) {
             // If token exists, attempt to verify it with the backend
-            axios.post('/api/users/verifyToken', { token })
+            axios.post('https://platform-dsa-1.onrender.com/api/users/verifyToken', { token })
                 .then(res => {
                     dispatch(loginSuccess(res.data.user));
                 })

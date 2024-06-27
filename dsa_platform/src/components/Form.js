@@ -26,7 +26,7 @@ const Form = ({ isSignInPage = true }) => {
     
         try {
             if (isSignInPage) {
-                const res = await axios.post('/api/users/login', data);
+                const res = await axios.post('https://platform-dsa-1.onrender.com/api/users/login', data);
                 const token = res.data.token;
                 if (token) {
                     localStorage.setItem('token', token);
@@ -36,7 +36,7 @@ const Form = ({ isSignInPage = true }) => {
                     setErrorMessage('Invalid credentials');
                 }
             } else {
-                const res = await axios.post('/api/users/register', data);
+                const res = await axios.post('https://platform-dsa-1.onrender.com/api/users/register', data);
                 if (res.status === 200) {
                     navigate('/users/sign_in'); // Redirect to sign-in after successful registration
                 } else {

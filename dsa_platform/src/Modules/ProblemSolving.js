@@ -22,14 +22,14 @@ const ProblemDetail = () => {
       }
 
       try {
-        const res = await axios.get(`http://localhost:3000/api/problems/${id}`, {
+        const res = await axios.get(`https://platform-dsa-1.onrender.com/api/problems/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
         setProblem(res.data);
 
-        const userRes = await axios.get(`http://localhost:3000/api/users/profile`, {
+        const userRes = await axios.get(`https://platform-dsa-1.onrender.com/api/users/profile`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -53,7 +53,7 @@ const ProblemDetail = () => {
     }
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:3000/api/users/updateSolvedProblems`, {
+      await axios.put(`https://platform-dsa-1.onrender.com/api/users/updateSolvedProblems`, {
         problemId: id
       }, {
         headers: {

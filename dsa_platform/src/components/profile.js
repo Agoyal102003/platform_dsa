@@ -36,7 +36,7 @@ function Profile() {
     
             try {
                 // Fetch profile data including rank
-                const res = await axios.get('/api/users/profile', config);
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 setProfileData({
                     fullName: res.data.fullName || 'A',
                     username: res.data.username || 'N/A',
@@ -47,7 +47,7 @@ function Profile() {
                 });
 
                 // Update solvedProblems field in the user's profile
-                await axios.put('/api/users/updateSolvedProblems', {
+                await axios.put('https://platform-dsa-1.onrender.com/api/users/updateSolvedProblems', {
                     solvedProblems: solvedProblems
                 }, config);
 

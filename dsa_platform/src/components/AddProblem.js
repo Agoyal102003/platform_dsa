@@ -55,7 +55,7 @@ const AddProblem = () => {
     };
 
     try {
-      const res = await axios.post('/api/problems', data, {
+      const res = await axios.post('https://platform-dsa-1.onrender.com/api/problems', data, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

@@ -25,7 +25,7 @@ function CommunityProfile() { // Update prop name here
             };
 
             try {
-                const res = await axios.get('/api/users/profile', config);
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 setProfileDataCommunity({
                     fullName: res.data.fullName || 'A',
                     username: res.data.username || 'N/A',
