@@ -46,21 +46,14 @@ function Profile() {
                     rank: res.data.rank || 0  // Update rank from API response
                 });
 
-                // Update solvedProblems field in the user's profile
-                await axios.put('https://platform-dsa-1.onrender.com/api/users/updateSolvedProblems', {
-                    solvedProblems: solvedProblems
-                }, config);
-
             } catch (error) {
                 console.error('Error fetching or updating profile data:', error);
                 // Handle error if needed
             }
         };
     
-        if (solvedProblems !== null) { // Ensure solvedProblems is available before updating
-            fetchProfileData();
-        }
-    }, [solvedProblems]);
+        fetchProfileData();
+    }, []);
 
     return (
         <div className="fulldiv"> 
