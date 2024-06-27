@@ -85,9 +85,9 @@ function ExpandedInputBox({ addPost, onClose }) {
             <div className="expanded-input-box">
                 <div className="header">
                     <div className="profile-info">
-                        <div className="profile-picture">
+                        <div className="profile-pictureee">
                             {userData.profileImage ? (
-                                <img src={`https://platform-dsa-1.onrender.com/${userData.profileImage}`} alt="Profile" style={{ borderRadius: "100%" }} />
+                                <img src={`https://platform-dsa-1.onrender.com/${userData.profileImage}`} alt="Profile" style={{ borderRadius: "100%", height: "40px", width: "40px" }} />
                             ) : (
                                 <div className="profile-initials">
                                     {getUserInitial(userData.fullName)}
