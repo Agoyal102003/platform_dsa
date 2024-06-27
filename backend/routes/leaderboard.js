@@ -5,7 +5,7 @@ const User = require('../models/User'); // Adjust the path as necessary
 router.get('/leaderboard', async (req, res) => {
     try {
         const users = await User.find({})
-            .select('username solvedProblems rank'); // Select relevant fields
+            .select('fullName username solvedProblems rank'); // Select relevant fields
 
         // Calculate the count of solved problems and rank based on sorted order
         const usersWithCounts = users.map((user, index) => {
@@ -13,7 +13,7 @@ router.get('/leaderboard', async (req, res) => {
 
             return {
                 _id: user._id,
-                username: user.username,
+                username: user.username || user.fullName,
                 solvedProblemCount: solvedProblemCount,
                 rank: index + 1,
             };

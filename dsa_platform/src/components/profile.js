@@ -42,7 +42,7 @@ function Profile() {
                     username: res.data.username || 'N/A',
                     institution: res.data.institution || 'N/A',
                     language: res.data.language || 'N/A',
-                    profileImage: res.data.profileImage || '',
+                    profileImage: res.data.profileImage || 'https://bootdey.com/img/Content/avatar/avatar1.png',
                     rank: res.data.rank || 0  // Update rank from API response
                 });
 

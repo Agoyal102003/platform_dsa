@@ -103,8 +103,8 @@ const ProblemDetail = () => {
           </div>
         </div>
         <div className='codeEditor'>
-          {/* <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} /> */}
-          {solved ? <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} /> : <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} />}
+          <Landing testCases={problem.testCases} onSolutionAccepted={handleSolutionAccepted} />
+          {solved ? <p>y</p> : <p>n</p>}
         </div>
       </div>
     </div>
