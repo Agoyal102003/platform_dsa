@@ -33,32 +33,41 @@ function Profile() {
                     Authorization: `Bearer ${token}`
                 }
             };
-
+    
             try {
-                const res = await axios.get('/api/users/profile', config);
+                // Fetch profile data including rank
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 setProfileData({
                     fullName: res.data.fullName || 'A',
                     username: res.data.username || 'N/A',
                     institution: res.data.institution || 'N/A',
                     language: res.data.language || 'N/A',
-                    profileImage: res.data.profileImage || '',
+                    profileImage: res.data.profileImage || 'https://bootdey.com/img/Content/avatar/avatar1.png',
                     rank: res.data.rank || 0  // Update rank from API response
                 });
-                console.log("Profile data updated in state:", res.data);
+
+                // Update solvedProblems field in the user's profile
+                await axios.put('https://platform-dsa-1.onrender.com/api/users/updateSolvedProblems', {
+                    solvedProblems: solvedProblems
+                }, config);
+
             } catch (error) {
-                console.error('Error fetching profile data:', error);
+                console.error('Error fetching or updating profile data:', error);
+                // Handle error if needed
             }
         };
-
-        fetchProfileData();
-    }, []);
+    
+        if (solvedProblems !== null) { // Ensure solvedProblems is available before updating
+            fetchProfileData();
+        }
+    }, [solvedProblems]);
 
     return (
         <div className="fulldiv"> 
             <div className="onediv">
                 <div className="profileImg">
                     {profileData.profileImage ? (
-                        <img src={profileData.profileImage} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
+                        <img src={`https://platform-dsa-1.onrender.com/${profileData.profileImage}`} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
                     ) : (
                         <p
                             style={{
