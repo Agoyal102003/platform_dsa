@@ -127,7 +127,7 @@ function EditProfile() {
                     <div className="card cardedit">
                         <div className="card-header cardheaderedit">Profile Picture</div>
                         <div className="card-body text-center">
-                            <img className="img-account-profile rounded-circle mb-2 editimg" src={`http://bootdey.com/img/Content/avatar/avatar1.png`} alt="Profile" />
+                            <img className="img-account-profile rounded-circle mb-2 editimg" src={`https://bootdey.com/img/Content/avatar/avatar1.png`} alt="Profile" />
                             {/* <div className='imginpt'>
                                 <input type="file" name="profileImage" onChange={handleFileChange} />
                             </div> */}
