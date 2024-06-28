@@ -83,10 +83,9 @@ router.post('/login', async (req, res) => {
 // Update profile route
 router.post('/profile', authenticateToken, async (req, res) => {
     const { fullName, email, username, contactNo, institution, bio, language, gender } = req.body;
-    // const profileImage = req.file ? req.file.path : null;
 
     try {
-        const userId = req.user.id; // Assuming user ID is available in req.user
+        const userId = req.user.id;
         const user = await User.findById(userId);
 
         if (user) {
@@ -99,10 +98,6 @@ router.post('/profile', authenticateToken, async (req, res) => {
             user.language = language || user.language;
             user.gender = gender || user.gender;
 
-            // if (profileImage) {
-            //     user.profileImage = profileImage;
-            // }
-
             await user.save();
             res.json({ message: 'Profile updated successfully', user });
         } else {
@@ -113,6 +108,7 @@ router.post('/profile', authenticateToken, async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+
 
 
 

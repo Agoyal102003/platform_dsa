@@ -92,10 +92,6 @@ function EditProfile() {
         formDataToSend.append('language', formData.language);
         formDataToSend.append('gender', formData.gender);
     
-        // if (formData.profileImage) {
-        //     formDataToSend.append('profileImage', formData.profileImage);
-        // }
-    
         const config = {
             headers: {
                 'Content-Type': 'multipart/form-data',
@@ -106,16 +102,8 @@ function EditProfile() {
         try {
             const res = await axios.post('https://platform-dsa-1.onrender.com/api/users/profile', formDataToSend, config);
             console.log('Profile update response:', res.data);
-    
-            // Update image URL if profileImage was uploaded
-            // if (formData.profileImage) {
-            //   setImagePreview(URL.createObjectURL(formData.profileImage)); // Update image after save
-            // }
-    
-            // Handle success response if needed
         } catch (error) {
             console.error('Error updating profile:', error);
-            // Handle error response
         }
     };
 
