@@ -81,9 +81,8 @@ router.post('/login', async (req, res) => {
 });
 
 // Update profile route
-router.post('/profile', authenticateToken, upload.single('profileImage'), async (req, res) => {
+router.post('/profile', authenticateToken, async (req, res) => {
     const { username, contactNo, institution, bio, language, gender } = req.body;
-    const profileImage = req.file ? req.file.path : null;
     const userId = req.user.id;
 
     try {
@@ -92,19 +91,12 @@ router.post('/profile', authenticateToken, upload.single('profileImage'), async 
             return res.status(404).json({ message: 'User not found' });
         }
 
-        // Check if fullName is available in the retrieved user data
-        const fullName = user.fullName || ''; // Default to empty string if fullName is undefined
-
         user.username = username;
         user.contactNo = contactNo;
         user.institution = institution;
         user.bio = bio;
         user.language = language;
         user.gender = gender || user.gender;
-
-        if (profileImage) {
-            user.profileImage = profileImage;
-        }
 
         await user.save();
         res.json({ message: 'Profile updated successfully', user });
