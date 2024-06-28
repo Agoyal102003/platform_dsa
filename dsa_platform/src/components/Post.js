@@ -87,7 +87,7 @@ function Post({ post, removePost }) {
             return {
                 fullName: response.data.fullName,
                 username: response.data.username,
-                profileImage: response.data.profileImage,
+                // profileImage: response.data.profileImage,
                 userId: response.data._id,
             };
         } catch (error) {
@@ -110,7 +110,7 @@ function Post({ post, removePost }) {
             text: commentText,
             author: currentUser.fullName,
             authorId: currentUser.userId,
-            authorImage: currentUser.profileImage,
+            // authorImage: currentUser.profileImage,
         };
 
         try {
@@ -196,8 +196,11 @@ function Post({ post, removePost }) {
             <div className="post_wrapper">
                 <div className="post_header">
                     <div className="post_author_link">
+                                <div className="post_author_imageee">
+                                {getAuthorInitial(post.author)}
+                                </div>
                     
-                    {post.authorImage ? (
+                    {/* {post.authorImage ? (
                                 <img
                                 src={`https://platform-dsa-1.onrender.com/${post.authorImage}`}
                                 alt="Profile"
@@ -207,7 +210,7 @@ function Post({ post, removePost }) {
                             ) : (<div className="post_author_imageee">
                                 {getAuthorInitial(post.author)}
                                 </div>
-                            )}
+                            )} */}
                     
                         <div className="post_author_details">
                             <span className="post_author_name">{post.author}</span>

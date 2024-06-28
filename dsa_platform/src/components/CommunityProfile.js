@@ -51,15 +51,22 @@ function CommunityProfile() { // Update prop name here
         }
     };
 
+    // Function to get the initial of the user's full name
+    const getUserInitial = (fullName) => {
+        if (!fullName) return 'A'; // Default to 'A' if no name is provided
+        return fullName.charAt(0).toUpperCase();
+    };
+
     return (
         <div className="communityprofilebox">
             <div className="onedivcommunity">
                 <div className="profileImgcommunity" style={{ backgroundColor: 'rgb(231, 231, 231)' }}>
-                    {profileDataCommunity.profileImage ? (
+                    {getUserInitial(profileDataCommunity.fullName)}
+                    {/* {profileDataCommunity.profileImage ? (
                         <img src={`https://platform-dsa-1.onrender.com/${profileDataCommunity.profileImage}`} alt="Profile" className="profileImgcommunity" />
                     ) : (
                         'A'
-                    )}
+                    )} */}
                 </div>
 
                 <div className="profileDetailscommunity">

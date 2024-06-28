@@ -49,7 +49,7 @@ function Feed() {
             return {
                 fullName: response.data.fullName,
                 username: response.data.username,
-                profileImage: response.data.profileImage,
+                // profileImage: response.data.profileImage,
                 bio: response.data.bio,
                 userId: response.data._id,
             };
@@ -73,11 +73,11 @@ function Feed() {
             author: currentUser.fullName,
             role: currentUser.bio, 
             time: new Date().toLocaleDateString(),
-            authorImage: currentUser.profileImage,
+            // authorImage: currentUser.profileImage,
             authorId: currentUser.userId,
         };
-        console.log("authorImage", newPost.authorImage);
-        console.log("newPost", newPost);
+        // console.log("authorImage", newPost.authorImage);
+        // console.log("newPost", newPost);
 
         try {
             const response = await axios.post('https://platform-dsa-1.onrender.com/api/posts', newPost);

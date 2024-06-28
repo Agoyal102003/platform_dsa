@@ -7,18 +7,26 @@ const Comments = ({ comments, postId, onDeleteComment }) => {
         setShowDeleteButton(prevId => prevId === commentId ? null : commentId);
     };
 
+    const getUserInitial = (fullName) => {
+        if (!fullName) return 'A'; // Default to 'A' if no name is provided
+        return fullName.charAt(0).toUpperCase();
+    };
+
     return (
         <div className="comments_section">
             {comments.map((comment) => (
                 <div className="feedCardMain" key={comment._id}>
                     <div className="post_header">
                         <a href={`/community/profile/${comment.authorId}`} className="post_author_link">
-                            <img
+                        <div className="post_Comment_author_image">
+                        {getUserInitial(comment.author)}
+                        </div>
+                            {/* <img
                                 src={comment.authorImage || 'https://media.geeksforgeeks.org/auth/profile/4d22qt8yrho7pplu1lld'}
                                 alt="Profile"
                                 className="post_Comment_author_image"
                                 style={{ objectFit: 'cover' }}
-                            />
+                            /> */}
                             <div className="post_author_details" style={{ marginLeft: '10px' }}>
                                 <span className="post_Comment_author_name">{comment.author}</span>
                                 <span className="post_Comment_author_msg">{comment.text}</span>
