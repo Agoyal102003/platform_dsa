@@ -12,11 +12,11 @@ function EditProfile() {
         contactNo: '',
         institution: '',
         bio: '',
-        profileImage: null,
+        // profileImage: null,
         language: '',
         gender: '',
     });
-    const [imagePreview, setImagePreview] = useState('http://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
+    // const [imagePreview, setImagePreview] = useState('http://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
 
     // Fetch user profile data on component mount
     useEffect(() => {
@@ -38,14 +38,14 @@ function EditProfile() {
                     contactNo: userProfile.contactNo || '',
                     institution: userProfile.institution || '',
                     bio: userProfile.bio || '',
-                    profileImage: null,
+                    // profileImage: null,
                     language: userProfile.language || '',
                     gender: userProfile.gender || ''
                 });
                 // If user has a profile image, set it as the image preview
-                if (userProfile.profileImage) {
-                    setImagePreview(userProfile.profileImage);
-                }
+                // if (userProfile.profileImage) {
+                //     setImagePreview(userProfile.profileImage);
+                // }
             } catch (error) {
                 console.error('Error fetching profile data:', error);
                 // Handle error if needed
@@ -60,22 +60,22 @@ function EditProfile() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        setFormData({ ...formData, profileImage: file });
+    // const handleFileChange = (e) => {
+    //     const file = e.target.files[0];
+    //     setFormData({ ...formData, profileImage: file });
 
-        // Read the file and update the image preview
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setImagePreview(reader.result); // Update state with the selected image's data URL
-        };
+    //     // Read the file and update the image preview
+    //     const reader = new FileReader();
+    //     reader.onloadend = () => {
+    //         setImagePreview(reader.result); // Update state with the selected image's data URL
+    //     };
 
-        if (file) {
-            reader.readAsDataURL(file);
-        } else {
-            setImagePreview('http://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
-        }
-    };
+    //     if (file) {
+    //         reader.readAsDataURL(file);
+    //     } else {
+    //         setImagePreview('http://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
+    //     }
+    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -92,9 +92,9 @@ function EditProfile() {
         formDataToSend.append('language', formData.language);
         formDataToSend.append('gender', formData.gender);
     
-        if (formData.profileImage) {
-            formDataToSend.append('profileImage', formData.profileImage);
-        }
+        // if (formData.profileImage) {
+        //     formDataToSend.append('profileImage', formData.profileImage);
+        // }
     
         const config = {
             headers: {
@@ -108,9 +108,9 @@ function EditProfile() {
             console.log('Profile update response:', res.data);
     
             // Update image URL if profileImage was uploaded
-            if (formData.profileImage) {
-              setImagePreview(URL.createObjectURL(formData.profileImage)); // Update image after save
-            }
+            // if (formData.profileImage) {
+            //   setImagePreview(URL.createObjectURL(formData.profileImage)); // Update image after save
+            // }
     
             // Handle success response if needed
         } catch (error) {
@@ -127,10 +127,10 @@ function EditProfile() {
                     <div className="card cardedit">
                         <div className="card-header cardheaderedit">Profile Picture</div>
                         <div className="card-body text-center">
-                            <img className="img-account-profile rounded-circle mb-2 editimg" src={`https://platform-dsa-1.onrender.com/${imagePreview}`} alt="Profile" />
-                            <div className='imginpt'>
+                            <img className="img-account-profile rounded-circle mb-2 editimg" src={`http://bootdey.com/img/Content/avatar/avatar1.png`} alt="Profile" />
+                            {/* <div className='imginpt'>
                                 <input type="file" name="profileImage" onChange={handleFileChange} />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className='editsidebar'>

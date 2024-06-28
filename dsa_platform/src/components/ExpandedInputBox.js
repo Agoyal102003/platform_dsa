@@ -7,7 +7,7 @@ function ExpandedInputBox({ addPost, onClose }) {
     const [showPlaceholder, setShowPlaceholder] = useState(true);
     const [userData, setUserData] = useState({
         fullName: '',
-        profileImage: '', // Initialize profile image as empty string
+        // profileImage: '', // Initialize profile image as empty string
     });
     const contentEditableRef = useRef(null);
 
@@ -28,7 +28,7 @@ function ExpandedInputBox({ addPost, onClose }) {
                 const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 setUserData({
                     fullName: res.data.fullName || 'A', // Default if fullName is empty
-                    profileImage: res.data.profileImage || '', // Set profile image from API response
+                    // profileImage: res.data.profileImage || '', // Set profile image from API response
                 });
             } catch (error) {
                 console.error('Error fetching user data:', error);
@@ -86,13 +86,16 @@ function ExpandedInputBox({ addPost, onClose }) {
                 <div className="header">
                     <div className="profile-info">
                         <div className="profile-pictureee">
-                            {userData.profileImage ? (
+                                <div className="profile-initials">
+                                    {getUserInitial(userData.fullName)}
+                                </div>
+                            {/* {userData.profileImage ? (
                                 <img src={`https://platform-dsa-1.onrender.com/${userData.profileImage}`} alt="Profile" style={{ borderRadius: "100%", height: "40px", width: "40px" }} />
                             ) : (
                                 <div className="profile-initials">
                                     {getUserInitial(userData.fullName)}
                                 </div>
-                            )}
+                            )} */}
                         </div>
                         <div className="profile-details">
                             <span className="profile-name">{userData.fullName}</span>

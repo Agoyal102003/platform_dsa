@@ -15,7 +15,7 @@ function Profile() {
         username: '',
         institution: '',
         language: '',
-        profileImage: '',
+        // profileImage: '',
         rank: 0  // Initialize rank in state
     });
 
@@ -42,7 +42,7 @@ function Profile() {
                     username: res.data.username || 'N/A',
                     institution: res.data.institution || 'N/A',
                     language: res.data.language || 'N/A',
-                    profileImage: res.data.profileImage || 'https://bootdey.com/img/Content/avatar/avatar1.png',
+                    // profileImage: res.data.profileImage || 'https://bootdey.com/img/Content/avatar/avatar1.png',
                     rank: res.data.rank || 0  // Update rank from API response
                 });
 
@@ -59,8 +59,9 @@ function Profile() {
         <div className="fulldiv"> 
             <div className="onediv">
                 <div className="profileImg">
-                    {profileData.profileImage ? (
-                        <img src={`https://platform-dsa-1.onrender.com/${profileData.profileImage}`} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
+                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
+                    {/* {profileData.profileImage ? (
+                        <img src={`https://bootdey.com/img/Content/avatar/avatar1.png`} alt="Profile" className="profileImageAsInitials_head__iG5KE undefined" />
                     ) : (
                         <p
                             style={{
@@ -72,7 +73,7 @@ function Profile() {
                         >
                             {profileData.fullName.charAt(0)}
                         </p>
-                    )}
+                    )} */}
                     <div className="profilePicSection_head_img_editBbutton__3l8L7"></div>
                 </div>
 

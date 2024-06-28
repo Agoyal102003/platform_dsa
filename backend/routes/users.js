@@ -5,23 +5,23 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const authenticateToken = require('../middleware/auth');
-const multer = require('multer');
+// const multer = require('multer');
 const router = express.Router();
 
 // Secret key for JWT
 const JWT_SECRET = 'your_jwt_secret_key';
 
 // Configure multer for file upload
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/');
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + '-' + file.originalname);
-    },
-});
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'uploads/');
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + '-' + file.originalname);
+//     },
+// });
 
-const upload = multer({ storage });
+// const upload = multer({ storage });
 
 // Register a new user
 router.post('/register', async (req, res) => {
@@ -81,9 +81,9 @@ router.post('/login', async (req, res) => {
 });
 
 // Update profile route
-router.post('/profile', authenticateToken, upload.single('profileImage'), async (req, res) => {
+router.post('/profile', authenticateToken, async (req, res) => {
     const { fullName, email, username, contactNo, institution, bio, language, gender } = req.body;
-    const profileImage = req.file ? req.file.path : null;
+    // const profileImage = req.file ? req.file.path : null;
 
     try {
         const userId = req.user.id; // Assuming user ID is available in req.user
@@ -99,9 +99,9 @@ router.post('/profile', authenticateToken, upload.single('profileImage'), async 
             user.language = language || user.language;
             user.gender = gender || user.gender;
 
-            if (profileImage) {
-                user.profileImage = profileImage;
-            }
+            // if (profileImage) {
+            //     user.profileImage = profileImage;
+            // }
 
             await user.save();
             res.json({ message: 'Profile updated successfully', user });
