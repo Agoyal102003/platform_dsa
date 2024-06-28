@@ -16,7 +16,7 @@ function EditProfile() {
         language: '',
         gender: '',
     });
-    const [imagePreview, setImagePreview] = useState('http://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
+    const [imagePreview, setImagePreview] = useState('https://bootdey.com/img/Content/avatar/avatar1.png'); // Default image URL
 
     // Fetch user profile data on component mount
     useEffect(() => {
@@ -29,7 +29,7 @@ function EditProfile() {
             };
 
             try {
-                const res = await axios.get('/api/users/profile', config);
+                const res = await axios.get('https://platform-dsa-1.onrender.com/api/users/profile', config);
                 const userProfile = res.data;
                 setFormData({
                     name: userProfile.fullName || '',
@@ -73,7 +73,7 @@ function EditProfile() {
       if (file) {
           reader.readAsDataURL(file);
       } else {
-          setImagePreview('http://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
+          setImagePreview('https://bootdey.com/img/Content/avatar/avatar1.png'); // Reset to default image if no file is selected
       }
   };
 
@@ -104,7 +104,7 @@ function EditProfile() {
     };
 
     try {
-        const res = await axios.post('/api/users/profile', formDataToSend, config);
+        const res = await axios.post('https://platform-dsa-1.onrender.com/api/users/profile', formDataToSend, config);
         console.log('Profile update response:', res.data);
 
         // Update image URL if profileImage was uploaded
@@ -129,7 +129,7 @@ function EditProfile() {
                     <div className="card cardedit">
                         <div className="card-header cardheaderedit">Profile Picture</div>
                         <div className="card-body text-center">
-                        <img className="img-account-profile rounded-circle mb-2 editimg" src={imagePreview} alt="Profile" />
+                        <img className="img-account-profile rounded-circle mb-2 editimg" src={`https://platform-dsa-1.onrender.com/${imagePreview}`} alt="Profile" />
                             <div className='imginpt'>
                                 <input type="file" name="profileImage" onChange={handleFileChange} />
                             </div>
