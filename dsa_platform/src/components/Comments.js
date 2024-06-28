@@ -18,7 +18,7 @@ const Comments = ({ comments, postId, onDeleteComment }) => {
                 <div className="feedCardMain" key={comment._id}>
                     <div className="post_header">
                         <a href={`/community/profile/${comment.authorId}`} className="post_author_link">
-                        <div className="post_Comment_author_image">
+                        <div className="post_Comment_author_image" style={{ backgroundColor: "rgb(231, 231, 231)", color: "black", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "650", marginLeft: "3px"}}>
                         {getUserInitial(comment.author)}
                         </div>
                             {/* <img
