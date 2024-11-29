@@ -1,5 +1,4 @@
 .part4 {
-    background-color: rgb(15, 14, 14);
     color: white;
     width: calc(100%);
     margin-bottom: 100px; /* Center the container */
@@ -16,6 +15,7 @@
 }
 
 .heading {
+    color: black;
     font-size: 2rem;
     font-weight: 600;
 }
