@@ -6,7 +6,7 @@ function Part2() {
   return (
     <div className="Part2">
       <div className="Preorder">
-        <h1 style={{color: "whitesmoke"}}>For you</h1>
+        <h1 style={{color: "black"}}>Discover Study Together</h1>
         <div className="card-container">
           <Card 
             title="Read DSA Concepts"
